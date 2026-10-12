@@ -1,0 +1,745 @@
+/* Scoopful Editorial Premium — Page Specific Layouts */
+
+/* ==========================================================================
+   HOMEPAGE HERO SECTION
+   ========================================================================== */
+.hero-section {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(3.5rem, 6vw, 5.5rem);
+  background: linear-gradient(180deg, var(--color-vanilla) 0%, #FAF2E6 100%);
+  border-bottom: 1px solid var(--color-line);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.hero-copy {
+  max-width: 620px;
+}
+
+.hero-badge-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  margin-bottom: 1.25rem;
+  line-height: 1.08;
+}
+
+.hero-title span {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-mauve);
+}
+
+.hero-lede {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: var(--color-soft);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.metric-item b {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--color-plum);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.metric-item span {
+  font-size: 0.875rem;
+  color: var(--color-soft);
+}
+
+.hero-visual-card {
+  position: relative;
+}
+
+.hero-image-wrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(62, 35, 80, 0.08);
+  aspect-ratio: 4 / 4.8;
+  background-color: #f0e6d6;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-image-wrap:hover img {
+  transform: scale(1.02);
+}
+
+.hero-image-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(62, 35, 80, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.caption-title {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  color: var(--color-plum);
+  font-weight: 600;
+}
+
+.caption-sub {
+  font-size: 0.8125rem;
+  color: var(--color-soft);
+}
+
+/* ==========================================================================
+   FLAVOUR GALLERY & FILTERING
+   ========================================================================== */
+.flavour-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 2.5rem;
+  scrollbar-width: none;
+}
+
+.flavour-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip {
+  background-color: var(--color-paper);
+  border: 1.5px solid var(--color-line);
+  color: var(--color-soft);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--color-mauve);
+  color: var(--color-plum);
+}
+
+.filter-chip.active {
+  background-color: var(--color-plum);
+  border-color: var(--color-plum);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.flavours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.flavour-card {
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.flavour-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-line-dark);
+}
+
+.flavour-media {
+  position: relative;
+  aspect-ratio: 4 / 3.4;
+  overflow: hidden;
+  background-color: #f7efe4;
+}
+
+.flavour-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.flavour-card:hover .flavour-media img {
+  transform: scale(1.04);
+}
+
+.flavour-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.flavour-card-title {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+}
+
+.flavour-card-tagline {
+  font-size: 0.875rem;
+  color: var(--color-mauve);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.flavour-card-desc {
+  font-size: 0.9375rem;
+  color: var(--color-soft);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.flavour-ingredients-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.flavour-ing-tag {
+  font-size: 0.75rem;
+  background-color: var(--color-vanilla);
+  color: var(--color-soft);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-line);
+}
+
+.flavour-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-line);
+  margin-top: auto;
+}
+
+.flavour-portion {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   BRAND DIFFERENTIATION ("HOW IT'S MADE")
+   ========================================================================== */
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .diff-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.diff-card {
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.diff-number {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  color: var(--color-lavender);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.diff-card h3 {
+  margin-bottom: 12px;
+}
+
+.diff-card p {
+  color: var(--color-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   STORY & CRAFT SECTION
+   ========================================================================== */
+.story-wrapper {
+  background-color: #FAF4EB;
+  border-radius: 24px;
+  padding: clamp(2rem, 5vw, 4rem);
+  border: 1px solid var(--color-line);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.story-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--color-line);
+}
+
+.timeline-point {
+  position: relative;
+}
+
+.timeline-point::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-mauve);
+  border: 2px solid #ffffff;
+}
+
+.timeline-tag {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-mauve);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-size: 1.125rem;
+  font-family: var(--font-serif);
+  color: var(--color-plum);
+  margin-bottom: 6px;
+}
+
+.timeline-desc {
+  font-size: 0.9375rem;
+  color: var(--color-soft);
+}
+
+/* ==========================================================================
+   OUTLET DISCOVERY
+   ========================================================================== */
+.outlets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 960px) {
+  .outlets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.outlet-card {
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.outlet-badge {
+  margin-bottom: 14px;
+}
+
+.outlet-name {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+.outlet-address {
+  font-size: 0.9375rem;
+  color: var(--color-soft);
+  margin-bottom: 12px;
+}
+
+.outlet-hours {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.outlet-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-line);
+}
+
+.upcoming-box {
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px dashed var(--color-line-dark);
+}
+
+.upcoming-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.upcoming-tag {
+  background-color: var(--color-lilac);
+  color: var(--color-plum);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+
+/* ==========================================================================
+   REVIEWS & PUBLISHED PROOF
+   ========================================================================== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.review-card {
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+}
+
+.review-quote {
+  font-size: 0.95rem;
+  color: var(--color-cocoa);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-plum);
+}
+
+.review-meta {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+/* ==========================================================================
+   FRANCHISE PAGE & COMPARISON
+   ========================================================================== */
+.model-toggle-strip {
+  display: inline-flex;
+  background-color: var(--color-lilac);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  margin-bottom: 2rem;
+}
+
+.model-tab-btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.model-tab-btn.active {
+  background-color: var(--color-plum);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 3rem;
+}
+
+.matrix-table th, .matrix-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.matrix-table th {
+  background-color: #FAF4EB;
+  color: var(--color-plum);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+.matrix-feature {
+  font-weight: 600;
+  color: var(--color-plum);
+  width: 25%;
+}
+
+.format-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 800px) {
+  .format-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.format-card {
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.format-card.featured {
+  border-color: var(--color-gold);
+  border-width: 2px;
+  box-shadow: 0 8px 24px rgba(255, 184, 0, 0.15);
+}
+
+.format-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin: 20px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  font-size: 0.875rem;
+}
+
+.spec-label {
+  color: var(--color-muted);
+}
+
+.spec-val {
+  font-weight: 600;
+  color: var(--color-plum);
+}
+
+/* ==========================================================================
+   PARTNER HUB & QUALIFICATION WIZARD
+   ========================================================================== */
+.programmes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 960px) {
+  .programmes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.programme-card {
+  background-color: var(--color-paper);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.programme-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-mauve);
+}
+
+.programme-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--color-lilac);
+  color: var(--color-plum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.wizard-card {
+  background-color: var(--color-paper);
+  border-radius: 24px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-lg);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.wizard-steps-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.wizard-step-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.wizard-step-node.active {
+  color: var(--color-plum);
+}
+
+.wizard-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-line);
+  color: var(--color-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+}
+
+.wizard-step-node.active .wizard-step-num {
+  background-color: var(--color-plum);
+  color: #ffffff;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

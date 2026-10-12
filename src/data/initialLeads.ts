@@ -1,0 +1,131 @@
+import { Lead } from '../types/lead';
+
+export const INITIAL_LEADS: Lead[] = [
+  {
+    id: 'SCP-2026-1042',
+    uuid: 'a89c9210-64be-4f51-b011-85dbff78b901',
+    createdAt: '2026-10-10T09:30:00Z',
+    updatedAt: '2026-10-11T14:15:00Z',
+    status: 'qualified',
+    programme: 'founding_partner',
+    fullName: 'Siddharth Rao',
+    phone: '+91 98450 12890',
+    email: 'siddharth.rao@apexventures.in',
+    city: 'Bengaluru',
+    area: 'Indiranagar 100ft Road',
+    investmentRange: 'under_10l',
+    siteStatus: 'have_site',
+    siteSqFt: '240 sq ft ground floor',
+    timeline: 'within_30_days',
+    notes: 'Interested in Founding QSR Scoop Bar slot. Commercial property owned on 100ft Road with dedicated front facade.',
+    internalNotes: 'Site reviewed via Google Street View. Prime pedestrian footfall. Scheduled in-person parlour visit at Rajajinagar.',
+    source: 'franchise_page',
+    isDemoSample: true,
+    auditTrail: [
+      { timestamp: '2026-10-10T09:30:00Z', action: 'Lead Submitted via Qualification Flow', performedBy: 'System' },
+      { timestamp: '2026-10-10T16:00:00Z', action: 'Discovery Call Completed', performedBy: 'Revanth Dinesh', notes: 'Budget and location verified. Strong intent.' },
+      { timestamp: '2026-10-11T14:15:00Z', action: 'Status changed to Qualified', performedBy: 'Revanth Dinesh' }
+    ]
+  },
+  {
+    id: 'SCP-2026-1043',
+    uuid: 'b91c9210-75ce-4g62-c022-96ecff89c012',
+    createdAt: '2026-10-11T11:45:00Z',
+    updatedAt: '2026-10-11T17:00:00Z',
+    status: 'new',
+    programme: 'cafe_freezer',
+    fullName: 'Pooja Hegde',
+    phone: '+91 99002 45812',
+    email: 'pooja@roastandco.com',
+    city: 'Bengaluru',
+    area: 'Koramangala 4th Block',
+    investmentRange: 'not_applicable',
+    siteStatus: 'have_site',
+    siteSqFt: 'Operating speciality café (65 seats)',
+    timeline: 'immediate',
+    notes: 'Runs Roast & Co Café. Wants to install Scoopful branded freezer to offer artisan sundaes alongside pour-overs.',
+    internalNotes: 'Zero capital programme fit. High average ticket size café. Ready for freezer placement agreement.',
+    source: 'partner_hub',
+    isDemoSample: true,
+    auditTrail: [
+      { timestamp: '2026-10-11T11:45:00Z', action: 'Lead Submitted via Partner Hub', performedBy: 'System' }
+    ]
+  },
+  {
+    id: 'SCP-2026-1044',
+    uuid: 'c02d0321-86df-5h73-d133-07fd0090d123',
+    createdAt: '2026-10-09T15:20:00Z',
+    updatedAt: '2026-10-12T10:00:00Z',
+    status: 'site_scouted',
+    programme: 'franchise_foco',
+    fullName: 'Venkatraman Swamy',
+    phone: '+91 97411 98234',
+    email: 'v.swamy@chennaicapital.com',
+    city: 'Chennai',
+    area: 'Anna Nagar 2nd Avenue',
+    investmentRange: '25l_to_40l',
+    siteStatus: 'scouting',
+    siteSqFt: '750 sq ft target',
+    timeline: '1_to_3_months',
+    notes: 'Looking for a hands-off FOCO parlour investment in Chennai. Willing to fund full Compact Parlour setup and rent deposit.',
+    internalNotes: 'Site scouted on Anna Nagar high street. Viability assessment passed. Preparing draft LOI with ₹1L token schedule.',
+    source: 'partner_hub',
+    isDemoSample: true,
+    auditTrail: [
+      { timestamp: '2026-10-09T15:20:00Z', action: 'Lead Submitted via Qualification Flow', performedBy: 'System' },
+      { timestamp: '2026-10-10T11:00:00Z', action: 'Discovery call held', performedBy: 'Revanth Dinesh' },
+      { timestamp: '2026-10-12T10:00:00Z', action: 'Site scouted and viability approved', performedBy: 'Revanth Dinesh' }
+    ]
+  },
+  {
+    id: 'SCP-2026-1045',
+    uuid: 'd13e1432-97eg-6i84-e244-18ge1101e234',
+    createdAt: '2026-10-08T18:00:00Z',
+    updatedAt: '2026-10-10T12:30:00Z',
+    status: 'contacted',
+    programme: 'distributor',
+    fullName: 'Mahesh Kulkarni',
+    phone: '+91 98230 67123',
+    email: 'mahesh@kulkarnibeverages.in',
+    city: 'Pune',
+    area: 'Kothrud & Baner Zones',
+    investmentRange: '10l_to_25l',
+    siteStatus: 'have_site',
+    siteSqFt: '1,200 sq ft cold storage facility',
+    timeline: 'within_30_days',
+    notes: 'Operates dairy distribution in Western Pune. Has 2 refrigerated Tata Ace vehicles. Wants Superstocker 50% tier.',
+    internalNotes: 'Cold chain capacity verified. Sent distributor margin agreement and cold chain SOP checklist.',
+    source: 'partner_hub',
+    isDemoSample: true,
+    auditTrail: [
+      { timestamp: '2026-10-08T18:00:00Z', action: 'Lead Submitted via Partner Hub', performedBy: 'System' },
+      { timestamp: '2026-10-09T14:00:00Z', action: 'Contacted via WhatsApp & Email', performedBy: 'Revanth Dinesh' }
+    ]
+  },
+  {
+    id: 'SCP-2026-1046',
+    uuid: 'e24f2543-08fh-7j95-f355-29hf2212f345',
+    createdAt: '2026-10-07T14:10:00Z',
+    updatedAt: '2026-10-11T16:45:00Z',
+    status: 'loi_sent',
+    programme: 'franchise_fofo',
+    fullName: 'Karthik Narayanan',
+    phone: '+91 98840 55210',
+    email: 'karthik@southdesserts.in',
+    city: 'Bengaluru',
+    area: 'HSR Layout Sector 1',
+    investmentRange: '10l_to_25l',
+    siteStatus: 'have_site',
+    siteSqFt: '620 sq ft ground corner',
+    timeline: 'within_30_days',
+    notes: 'Experienced restaurateur transitioning into artisanal dessert retail. FOFO Compact Parlour selected.',
+    internalNotes: 'LOI sent with ₹1 Lakh token clause. Partner visited Rajajinagar and Sahakarnagar parlours.',
+    source: 'franchise_page',
+    isDemoSample: true,
+    auditTrail: [
+      { timestamp: '2026-10-07T14:10:00Z', action: 'Lead Submitted', performedBy: 'System' },
+      { timestamp: '2026-10-08T10:00:00Z', action: 'Store visit conducted', performedBy: 'Revanth Dinesh' },
+      { timestamp: '2026-10-11T16:45:00Z', action: 'Letter of Intent (LOI) issued', performedBy: 'Revanth Dinesh' }
+    ]
+  }
+];
